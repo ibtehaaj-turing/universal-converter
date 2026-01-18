@@ -12,12 +12,6 @@ A modern Android unit converter application built with Kotlin and Jetpack Compos
 - **Material Design 3**: Modern UI with Material You theming
 - **Clean Architecture**: Maintainable and testable codebase
 
-## Screenshots
-
-| Home Screen | Converter Screen |
-|-------------|------------------|
-| Category selection | Unit conversion interface |
-
 ## Tech Stack
 
 | Technology | Version | Purpose |
@@ -29,16 +23,6 @@ A modern Android unit converter application built with Kotlin and Jetpack Compos
 | Navigation Compose | 2.8.5 | Screen navigation |
 | Lifecycle ViewModel | 2.8.7 | State management |
 | KSP | 2.0.0-1.0.24 | Kotlin Symbol Processing |
-
-### Testing
-
-| Library | Purpose |
-|---------|---------|
-| JUnit 4 | Unit testing framework |
-| MockK | Kotlin mocking library |
-| Turbine | Flow testing |
-| Espresso | Android UI testing |
-| Compose Testing | Compose UI tests |
 
 ## Architecture
 
