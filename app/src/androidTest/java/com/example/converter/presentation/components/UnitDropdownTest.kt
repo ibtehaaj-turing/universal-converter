@@ -1,7 +1,9 @@
 package com.example.converter.presentation.components
 
+import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import com.example.converter.domain.model.ConversionUnit
@@ -129,7 +131,8 @@ class UnitDropdownTest {
 
         composeTestRule.onNodeWithText("Meter (m)").performClick()
 
-        composeTestRule.onNodeWithText("Meter (m)").assertExists()
+        // Meter appears twice: in the selected field and in the dropdown menu
+        composeTestRule.onAllNodesWithText("Meter (m)").assertCountEquals(2)
         composeTestRule.onNodeWithText("Kilometer (km)").assertExists()
         composeTestRule.onNodeWithText("Centimeter (cm)").assertExists()
     }
