@@ -48,48 +48,6 @@ The app follows **Clean Architecture** with three main layers:
 └─────────────────────────────────────────────────────────┘
 ```
 
-## Project Structure
-
-```
-app/src/main/java/com/example/converter/
-├── data/
-│   └── repository/
-│       └── ConversionRepositoryImpl.kt
-├── di/
-│   └── AppModule.kt
-├── domain/
-│   ├── model/
-│   │   ├── ConversionResult.kt
-│   │   ├── ConversionUnit.kt
-│   │   └── ConverterCategory.kt
-│   ├── repository/
-│   │   └── ConversionRepository.kt
-│   └── usecase/
-│       ├── ConvertValueUseCase.kt
-│       └── GetUnitsForCategoryUseCase.kt
-├── presentation/
-│   ├── components/
-│   │   ├── CategoryCard.kt
-│   │   ├── ConversionInputField.kt
-│   │   ├── SwapButton.kt
-│   │   └── UnitDropdown.kt
-│   ├── converter/
-│   │   ├── ConverterScreen.kt
-│   │   ├── ConverterUiState.kt
-│   │   └── ConverterViewModel.kt
-│   ├── home/
-│   │   ├── HomeScreen.kt
-│   │   ├── HomeUiState.kt
-│   │   └── HomeViewModel.kt
-│   ├── navigation/
-│   │   └── ConverterNavGraph.kt
-│   └── theme/
-│       ├── Color.kt
-│       ├── Theme.kt
-│       └── Type.kt
-├── ConverterApplication.kt
-└── MainActivity.kt
-```
 
 ## Conversion Factors
 
