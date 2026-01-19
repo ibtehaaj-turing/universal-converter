@@ -1,5 +1,9 @@
 package com.example.converter.presentation.navigation
 
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -20,6 +24,8 @@ sealed class Screen(val route: String) {
     }
 }
 
+private const val TRANSITION_DURATION = 300
+
 @Composable
 fun ConverterNavGraph(
     navController: NavHostController = rememberNavController()
@@ -28,7 +34,33 @@ fun ConverterNavGraph(
         navController = navController,
         startDestination = Screen.Home.route
     ) {
-        composable(Screen.Home.route) {
+        composable(
+            route = Screen.Home.route,
+            enterTransition = {
+                slideIntoContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Right,
+                    animationSpec = tween(TRANSITION_DURATION)
+                ) + fadeIn(tween(TRANSITION_DURATION))
+            },
+            exitTransition = {
+                slideOutOfContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Left,
+                    animationSpec = tween(TRANSITION_DURATION)
+                ) + fadeOut(tween(TRANSITION_DURATION))
+            },
+            popEnterTransition = {
+                slideIntoContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Right,
+                    animationSpec = tween(TRANSITION_DURATION)
+                ) + fadeIn(tween(TRANSITION_DURATION))
+            },
+            popExitTransition = {
+                slideOutOfContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Right,
+                    animationSpec = tween(TRANSITION_DURATION)
+                ) + fadeOut(tween(TRANSITION_DURATION))
+            }
+        ) {
             HomeScreen(
                 onCategoryClick = { category ->
                     navController.navigate(Screen.Converter.createRoute(category))
@@ -42,7 +74,31 @@ fun ConverterNavGraph(
                 navArgument("category") {
                     type = NavType.StringType
                 }
-            )
+            ),
+            enterTransition = {
+                slideIntoContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Left,
+                    animationSpec = tween(TRANSITION_DURATION)
+                ) + fadeIn(tween(TRANSITION_DURATION))
+            },
+            exitTransition = {
+                slideOutOfContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Left,
+                    animationSpec = tween(TRANSITION_DURATION)
+                ) + fadeOut(tween(TRANSITION_DURATION))
+            },
+            popEnterTransition = {
+                slideIntoContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Right,
+                    animationSpec = tween(TRANSITION_DURATION)
+                ) + fadeIn(tween(TRANSITION_DURATION))
+            },
+            popExitTransition = {
+                slideOutOfContainer(
+                    towards = AnimatedContentTransitionScope.SlideDirection.Right,
+                    animationSpec = tween(TRANSITION_DURATION)
+                ) + fadeOut(tween(TRANSITION_DURATION))
+            }
         ) {
             ConverterScreen(
                 onBackClick = {

@@ -2,30 +2,38 @@ package com.example.converter.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
-
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
-
-val Primary = Color(0xFF1976D2)
+// Primary - Deep Teal
+val Primary = Color(0xFF00796B)
 val OnPrimary = Color(0xFFFFFFFF)
-val PrimaryContainer = Color(0xFFBBDEFB)
-val OnPrimaryContainer = Color(0xFF0D47A1)
+val PrimaryContainer = Color(0xFFB2DFDB)
+val OnPrimaryContainer = Color(0xFF004D40)
 
-val Secondary = Color(0xFF03A9F4)
-val OnSecondary = Color(0xFFFFFFFF)
-val SecondaryContainer = Color(0xFFB3E5FC)
-val OnSecondaryContainer = Color(0xFF01579B)
+// Secondary - Amber accent
+val Secondary = Color(0xFFFFA000)
+val OnSecondary = Color(0xFF000000)
+val SecondaryContainer = Color(0xFFFFE082)
+val OnSecondaryContainer = Color(0xFF5D4037)
 
+// Tertiary - Complementary blue-grey
+val Tertiary = Color(0xFF546E7A)
+val OnTertiary = Color(0xFFFFFFFF)
+val TertiaryContainer = Color(0xFFCFD8DC)
+val OnTertiaryContainer = Color(0xFF263238)
+
+// Background & Surface
 val Background = Color(0xFFFAFAFA)
 val OnBackground = Color(0xFF1C1B1F)
 val Surface = Color(0xFFFFFFFF)
 val OnSurface = Color(0xFF1C1B1F)
-val SurfaceVariant = Color(0xFFE7E0EC)
-val OnSurfaceVariant = Color(0xFF49454F)
+val SurfaceVariant = Color(0xFFE0F2F1)
+val OnSurfaceVariant = Color(0xFF37474F)
 
-val Error = Color(0xFFB00020)
+// Error
+val Error = Color(0xFFD32F2F)
 val OnError = Color(0xFFFFFFFF)
+val ErrorContainer = Color(0xFFFFCDD2)
+val OnErrorContainer = Color(0xFFB71C1C)
+
+// Outline
+val Outline = Color(0xFF78909C)
+val OutlineVariant = Color(0xFFB0BEC5)
