@@ -12,18 +12,6 @@ A modern Android unit converter application built with Kotlin and Jetpack Compos
 - **Material Design 3**: Modern UI with Material You theming
 - **Clean Architecture**: Maintainable and testable codebase
 
-## Tech Stack
-
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| Kotlin | 2.0.0 | Programming language |
-| Jetpack Compose | BOM 2024.12.01 | Modern UI toolkit |
-| Material 3 | Latest | Design system |
-| Hilt | 2.54 | Dependency injection |
-| Navigation Compose | 2.8.5 | Screen navigation |
-| Lifecycle ViewModel | 2.8.7 | State management |
-| KSP | 2.0.0-1.0.24 | Kotlin Symbol Processing |
-
 ## Architecture
 
 The app follows **Clean Architecture** with three main layers:
@@ -47,19 +35,3 @@ The app follows **Clean Architecture** with three main layers:
 │  └─────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────┘
 ```
-
-
-## Conversion Factors
-
-All length conversions use **Meter** as the base unit:
-
-| Unit | Symbol | To Base Factor |
-|------|--------|----------------|
-| Millimeter | mm | 0.001 |
-| Centimeter | cm | 0.01 |
-| Meter | m | 1.0 |
-| Kilometer | km | 1000.0 |
-| Inch | in | 0.0254 |
-| Foot | ft | 0.3048 |
-| Yard | yd | 0.9144 |
-| Mile | mi | 1609.344 |
